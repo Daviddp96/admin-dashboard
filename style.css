@@ -132,6 +132,7 @@ body {
     font-weight: bold;
     border-radius: 1.2rem;
     font-size: 1rem;
+    transition: all 0.4s;
 }
 
 .sidebar {
@@ -185,13 +186,15 @@ body {
 
 .nav__link:hover,
 .project-action:hover,
-.notification-bell:hover {
+.notification-bell:hover,
+.header__actions button:hover {
     transform: scale(0.95);
 }
 
 .nav__link:active,
 .project-action:active,
-.notification-bell:active {
+.notification-bell:active,
+.header__actions button:active {
     transform: translateY(1px);
 }
 
@@ -206,6 +209,7 @@ body {
     grid-template-columns: 3fr 1fr;
     padding: 1rem;
     padding-top: 2rem;
+    gap: 2rem;
 }
 
 .projects {
@@ -230,7 +234,8 @@ body {
     flex-direction: column;
 }
 
-.project p {
+.project p,
+.announcements-card p {
     display: block;
     width: 20rem;
     color: rgb(135, 135, 135);
@@ -253,4 +258,35 @@ body {
 .project-action {
     cursor: pointer;
     transition: all 0.4s;
+}
+
+.socials {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.announcements-card,
+.users-card {
+    background-color: var(--clr-text-secondary);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0px 7px 10px -5px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.trending {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
